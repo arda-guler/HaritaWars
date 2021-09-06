@@ -1,0 +1,58 @@
+M|hell_bridge.png
+
+C|Fairy Empire|red
+C|New Atlantis Federation|blue
+C|Alliance of Free Realms|green
+C|Order of Salvation|magenta
+
+R|Ancient Shrine|Order of Salvation|5|138|86
+R|Monastery|Order of Salvation|7|154|168
+R|Mount Light|Order of Salvation|4|221|95
+R|Hell Bridge|Order of Salvation|8|248|196
+
+R|Weststar|New Atlantis Federation|5|128|387
+R|Port Dimasou|New Atlantis Federation|4|179|321
+R|Masa|New Atlantis Federation|8|233|387
+R|Dagger Gate|New Atlantis Federation|4|246|261
+R|Fortress Hail|New Atlantis Federation|6|310|313
+R|South Eaststar|New Atlantis Federation|5|383|392
+R|North Eaststar|New Atlantis Federation|6|395|300
+
+R|Bloodwall|Alliance of Free Realms|7|361|232
+R|Port Polaris|Alliance of Free Realms|7|493|226
+R|Midville|Alliance of Free Realms|6|510|329
+R|Equ|Alliance of Free Realms|8|554|413
+R|Antraki|Alliance of Free Realms|5|670|363
+
+R|Master Yuman|Fairy Empire|8|659|114
+R|White Forest|Fairy Empire|5|608|270
+R|Magika|Fairy Empire|6|720|254
+R|Genesi Secu|Fairy Empire|3|825|220
+R|Valtegriska|Fairy Empire|5|817|335
+R|Emeinuka|Fairy Empire|4|770|403
+
+N|Ancient Shrine|Monastery, Mount Light
+N|Monastery|Ancient Shrine, Mount Light, Hell Bridge
+N|Mount Light|Ancient Shrine, Monastery, Hell Bridge
+N|Hell Bridge|Monastery, Mount Light, Dagger Gate, Bloodwall
+
+N|Weststar|Port Dimasou, Masa
+N|Port Dimasou|Weststar, Masa, Dagger Gate, Fortress Hail
+N|Masa|Weststar, Port Dimasou, Fortress Hail, South Eaststar
+N|Dagger Gate|Hell Bridge, Port Dimasou, Fortress Hail, Bloodwall
+N|Fortress Hail|Port Dimasou, Masa, Dagger Gate, South Eaststar, North Eaststar, Bloodwall
+N|South Eaststar|Masa, Fortress Hail, North Eaststar, Midville, Equ
+N|North Eaststar|Fortress Hail, South Eaststar, Bloodwall, Port Polaris, Midville
+
+N|Bloodwall|Dagger Gate, Fortress Hail, North Eaststar, Port Polaris
+N|Port Polaris|North Eaststar, Bloodwall, Midville, Master Yuman, White Forest
+N|Midville|South Eaststar, North Eaststar, Port Polaris, Equ, Antraki, White Forest
+N|Equ|South Eaststar, Midville, Antraki, Emeinuka
+N|Antraki|Midville, Equ, White Forest, Magika, Valtegriska, Emeinuka
+
+N|Master Yuman|Port Polaris, White Forest, Magika, Genesi Secu
+N|White Forest|Port Polaris, Midville, Antraki, Master Yuman, Magika
+N|Magika|Antraki, Master Yuman, White Forest, Genesi Secu, Valtegriska
+N|Genesi Secu|Master Yuman, Magika, Valtegriska
+N|Valtegriska|Antraki, Magika, Genesi Secu, Emeinuka
+N|Emeinuka|Equ, Antraki, Valtegriska
