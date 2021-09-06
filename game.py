@@ -208,9 +208,9 @@ def main():
 
                     print(country.get_name())
                     if attack_success:
-                        print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(FAILURE)")
-                    else:
                         print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(SUCCESS)")
+                    else:
+                        print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(FAILURE)")
 
                     for placement in AI_orders[1]:
                         print("+1", placement.get_name())
