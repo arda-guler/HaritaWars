@@ -2,7 +2,7 @@ import random
 
 def make_decisions(country):
 
-    points_to_place = int(country.get_power()/10)
+    points_to_place = max(int(country.get_power()/10), 1)
 
     # get regions with neighbours with max and min power differences
     best_attack_spots = []
