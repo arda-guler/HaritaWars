@@ -2,6 +2,7 @@ from tkinter import *
 from PIL import Image,ImageTk
 import keyboard
 import os
+import time
 
 from territory import *
 from AI import *
@@ -218,6 +219,7 @@ def main():
                     print("\n")
 
         win.update()
+        time.sleep(0.05)
 
     canvas.create_image(10, 10, anchor=NW, image=img)
     canvas.create_text(500, 25, text=turn_number_text, fill="black", font=("Times New Roman", 16))
