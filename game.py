@@ -87,14 +87,18 @@ def import_map():
             if r.get_owner() == c:
                 c.add_region(r)
 
+    map_bg_filename = "maps/" + map_bg_filename
+    
+    size_x = Image.open(map_bg_filename).size[0]
+    size_y = Image.open(map_bg_filename).size[1]
+
     win = Tk()
-    win.geometry("1000x520")
+    win.geometry(str(size_x + 150) + "x" + str(size_y + 50))
     win.title("HaritaWars")
 
-    canvas = Canvas(win, width=900, height=500)
+    canvas = Canvas(win, width=size_x, height=size_y)
     canvas.pack()
 
-    map_bg_filename = "maps/" + map_bg_filename
     img = ImageTk.PhotoImage(Image.open(map_bg_filename))
 
     return canvas, img, win

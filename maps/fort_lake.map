@@ -1,0 +1,81 @@
+M|fort_lake.png
+C|Old Kingdom|red
+C|East Ragkhi Khanate|blue
+R|Fort Lake|Old Kingdom|12|196|393
+R|Gateway|Old Kingdom|10|372|354
+R|Boragir|Old Kingdom|8|379|409
+R|Kanagir|Old Kingdom|8|259|276
+R|Esgir|Old Kingdom|4|115|281
+R|Shengir|Old Kingdom|3|32|372
+R|Melegir|Old Kingdom|5|62|461
+R|Anagir|Old Kingdom|6|287|461
+R|Samakan|Old Kingdom|3|37|207
+R|Tiigir|Old Kingdom|2|29|122
+R|Regsiban|Old Kingdom|3|113|139
+R|Yabokur|Old Kingdom|5|202|199
+R|Saghadi|Old Kingdom|5|405|255
+R|Urgijar|Old Kingdom|6|503|326
+R|Agtarme|Old Kingdom|6|422|447
+R|Salarta|Old Kingdom|5|580|450
+R|Fordin|Old Kingdom|5|549|392
+R|Seligir|Old Kingdom|4|586|314
+R|Sucare|Old Kingdom|4|561|219
+R|Keintre|Old Kingdom|6|685|397
+R|Finirte|Old Kingdom|5|675|243
+R|Dela|Old Kingdom|4|669|318
+R|Yabe|East Ragkhi Khanate|5|530|153
+R|Ginete|East Ragkhi Khanate|6|602|146
+R|Obete|East Ragkhi Khanate|6|558|42
+R|Kiffa|East Ragkhi Khanate|6|691|48
+R|Senfa|East Ragkhi Khanate|8|778|270
+R|Bilfa|East Ragkhi Khanate|10|742|459
+R|Shahkar|East Ragkhi Khanate|7|780|363
+R|Timto|East Ragkhi Khanate|7|733|145
+R|Yaiva|East Ragkhi Khanate|5|915|159
+R|Ovage|East Ragkhi Khanate|6|815|74
+R|Shiribe|East Ragkhi Khanate|5|842|210
+R|Gunte|East Ragkhi Khanate|4|926|308
+R|Ciheva|East Ragkhi Khanate|4|909|35
+R|Ranka|East Ragkhi Khanate|6|862|354
+R|Qerka|East Ragkhi Khanate|6|835|295
+R|Yerqi|East Ragkhi Khanate|5|837|439
+R|Eqimag|East Ragkhi Khanate|7|920|435
+N|Fort Lake|Gateway
+N|Gateway|Boragir, Fort Lake, Kanagir, Saghadi, Urgijar
+N|Boragir|Anagir, Agtarme, Gateway, Urgijar, Fordin
+N|Kanagir|Yabokur, Gateway, Saghadi, Esgir
+N|Esgir|Samakan, Shengir, Kanagir, Yabokur
+N|Shengir|Esgir, Samakan, Melegir
+N|Melegir|Shengir, Anagir
+N|Anagir|Melegir, Boragir, Agtarme
+N|Samakan|Tiigir, Regsiban, Yabokur, Esgir, Shengir
+N|Tiigir|Regsiban, Samakan
+N|Regsiban|Tiigir, Samakan, Yabokur
+N|Yabokur|Regsiban, Samakan, Kanagir, Esgir
+N|Saghadi|Gateway, Kanagir, Urgijar, Sucare, Yabe
+N|Urgijar|Saghadi, Gateway, Boragir, Fordin, Seligir, Sucare
+N|Agtarme|Anagir, Boragir, Fordin, Salarta
+N|Salarta|Agtarme, Fordin, Keintre
+N|Fordin|Boragir, Agtarme, Salarta, Urgijar, Seligir, Dela, Keintre
+N|Seligir|Urgijar, Sucare, Fordin, Dela, Finirte
+N|Sucare|Saghadi, Urgijar, Seligir, Finirte, Yabe, Ginete
+N|Keintre|Salarta, Fordin, Dela, Bilfa
+N|Finirte|Seligir, Sucare, Ginete, Dela, Senfa
+N|Dela|Fordin, Seligir, Keintre, Finirte
+N|Yabe|Sucare, Saghadi, Ginete, Obete
+N|Ginete|Sucare, Yabe, Finirte, Obete
+N|Obete|Ginete, Yabe, Kiffa
+N|Kiffa|Obete, Timto, Ovage
+N|Senfa|Timto, Shahkar, Finirte, Shiribe, Qerka
+N|Bilfa|Shahkar, Keintre, Yerqi
+N|Shahkar|Senfa, Bilfa, Yerqi, Ranka, Qerka
+N|Timto|Kiffa, Senfa, Shiribe, Ovage
+N|Yaiva|Ovage, Ciheva, Shiribe, Gunte
+N|Ovage|Kiffa, Timto, Ciheva, Yaiva, Shiribe
+N|Shiribe|Qerka, Senfa, Timto, Ovage, Yaiva
+N|Gunte|Ranka, Eqimag, Qerka, Yaiva
+N|Ciheva|Ovage, Yaiva
+N|Ranka|Yerqi, Shahkar, Qerka, Eqimag, Gunte
+N|Qerka|Shahkar, Ranka, Gunte, Shiribe, Senfa
+N|Yerqi|Bilfa, Shahkar, Ranka, Eqimag
+N|Eqimag|Ranka, Yerqi, Gunte
