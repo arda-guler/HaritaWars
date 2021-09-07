@@ -7,6 +7,7 @@ class region():
         self.development = development
         self.power = development
         self.pos = pos
+        self.neighbours = []
 
     def get_pos(self):
         return self.pos
@@ -17,8 +18,14 @@ class region():
     def set_neighbours(self, neighbours):
         self.neighbours = neighbours
 
+    def add_neighbour(self, neighbour):
+        self.neighbours.append(neighbour)
+
     def get_name(self):
         return self.name
+
+    def get_development(self):
+        return self.development
 
     def get_power(self):
         return self.power
@@ -143,3 +150,9 @@ class game_map():
 
     def get_regions(self):
         return self.regions
+
+    def add_region(self, region):
+        self.regions.append(region)
+
+    def remove_region(self, region):
+        self.regions.remove(region)

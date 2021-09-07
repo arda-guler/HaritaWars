@@ -1,0 +1,48 @@
+M|hell_bridge.png
+C|North Kaliria|red
+C|South Kaliria|blue
+C|Makojosu|magenta
+R|Kaliria-sa|South Kaliria|8|248|394
+R|Kaliria-non|North Kaliria|8|156|172
+R|Makojosun|Makojosu|8|828|205
+R|Fenirir|South Kaliria|5|312|334
+R|Hu|South Kaliria|6|408|305
+R|Prata|South Kaliria|4|132|385
+R|Klemin|South Kaliria|5|400|401
+R|Gumenyei|South Kaliria|5|552|411
+R|Gumenyesa|South Kaliria|4|507|335
+R|Kagahagir|South Kaliria|4|192|319
+R|Yaga|North Kaliria|4|129|79
+R|Teremi|North Kaliria|4|227|113
+R|Gokage-hi|North Kaliria|6|253|205
+R|Terashi|North Kaliria|5|253|272
+R|Sakashi|North Kaliria|5|351|234
+R|Yugasi|North Kaliria|6|473|217
+R|Makataka|Makojosu|5|704|126
+R|Makasagi|Makojosu|6|721|252
+R|Makagyu|Makojosu|5|807|333
+R|Makashou|Makojosu|4|784|398
+R|Mokushwa|Makojosu|5|606|283
+R|Mokugiro|Makojosu|5|678|354
+N|Kaliria-sa|Kagahagir, Prata, Fenirir, Klemin
+N|Kaliria-non|Yaga, Teremi, Gokage-hi
+N|Makojosun|Makasagi, Makataka, Makagyu
+N|Fenirir|Kaliria-sa, Terashi, Kagahagir, Sakashi, Hu, Klemin
+N|Hu|Sakashi, Fenirir, Klemin, Yugasi, Gumenyesa
+N|Prata|Kagahagir, Kaliria-sa
+N|Klemin|Hu, Fenirir, Kaliria-sa, Gumenyesa, Gumenyei
+N|Gumenyei|Gumenyesa, Klemin, Mokugiro
+N|Gumenyesa|Yugasi, Hu, Klemin, Gumenyei, Mokushwa, Mokugiro
+N|Kagahagir|Terashi, Prata, Kaliria-sa, Fenirir
+N|Yaga|Teremi, Kaliria-non
+N|Teremi|Yaga, Kaliria-non, Gokage-hi
+N|Gokage-hi|Teremi, Kaliria-non, Terashi, Sakashi
+N|Terashi|Gokage-hi, Sakashi, Kagahagir, Fenirir
+N|Sakashi|Gokage-hi, Terashi, Fenirir, Hu, Yugasi
+N|Yugasi|Hu, Sakashi, Gumenyesa, Mokushwa, Makataka
+N|Makataka|Yugasi, Mokushwa, Makasagi, Makojosun
+N|Makasagi|Makataka, Mokushwa, Makojosun, Makagyu, Mokugiro
+N|Makagyu|Makasagi, Makojosun, Makashou, Mokugiro
+N|Makashou|Mokugiro, Makagyu
+N|Mokushwa|Yugasi, Gumenyesa, Mokugiro, Makataka, Makasagi
+N|Mokugiro|Gumenyei, Mokushwa, Gumenyesa, Makasagi, Makashou, Makagyu
