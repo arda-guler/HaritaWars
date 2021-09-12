@@ -124,7 +124,7 @@ def export():
     export_file.write("M|" + map_background_filename + "\n")
 
     for c in countries:
-        export_file.write("C|" + c.get_name() + "|" + c.get_color() + "\n")
+        export_file.write("C|" + c.get_name() + "|" + c.get_color() + "|" + c.get_AI() + "\n")
 
     for r in regions:
         export_file.write("R|" + r.get_name() + "|" + r.get_owner().get_name() + "|" +
@@ -201,8 +201,9 @@ def main():
         
         else:
             new_country_color = input("Enter color for " + new_country_name + ": ")
+            new_country_AI = input("Enter AI for " + new_country_name + " (or leave blank to use default_AI): ")
 
-            new_country = country(new_country_name, new_country_color)
+            new_country = country(new_country_name, new_country_color, new_country_AI)
             countries.append(new_country)
 
     # Display things on map

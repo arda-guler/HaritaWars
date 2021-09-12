@@ -1,0 +1,37 @@
+M|world.jpg
+C|Eurasia|red|opportunist_AI
+C|America|blue|opportunist_AI
+C|Eastasia|green|opportunist_AI
+C|Africa|purple|opportunist_AI
+R|Istanbul|Eurasia|8|516|220
+R|Moscow|Eurasia|8|529|173
+R|Paris|Eurasia|8|448|199
+R|Hong Kong|Eastasia|8|755|281
+R|Beijing|Eastasia|8|749|231
+R|Yakutsk|Eurasia|4|720|151
+R|Tokyo|Eastasia|8|819|238
+R|Lanzhou|Eastasia|4|700|235
+R|New York|America|8|219|226
+R|Rio|America|8|291|379
+R|Mexico City|America|8|148|275
+R|Panama|America|4|201|327
+R|Madagascar|Africa|8|570|422
+R|Cape Town|Africa|8|492|463
+R|Cairo|Africa|8|516|264
+R|Rabat|Africa|4|416|250
+N|Istanbul|Cairo, Paris, Moscow, Lanzhou, Rabat, Yakutsk
+N|Moscow|Paris, Istanbul, Yakutsk
+N|Paris|Rabat, Istanbul, Moscow, New York
+N|Hong Kong|Tokyo, Beijing, Lanzhou, Madagascar
+N|Beijing|Yakutsk, Lanzhou, Tokyo, Hong Kong
+N|Yakutsk|Moscow, Lanzhou, Beijing, Istanbul
+N|Tokyo|Beijing, Hong Kong
+N|Lanzhou|Istanbul, Yakutsk, Beijing, Hong Kong, Cairo
+N|New York|Mexico City, Panama, Rio, Rabat, Paris
+N|Rio|Rabat, Panama, New York
+N|Mexico City|Panama, New York
+N|Panama|Rio, Mexico City, New York
+N|Madagascar|Cairo, Cape Town, Hong Kong
+N|Cape Town|Cairo, Madagascar
+N|Cairo|Rabat, Cape Town, Madagascar, Istanbul, Lanzhou
+N|Rabat|Cairo, Paris, Rio, New York, Istanbul

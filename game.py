@@ -3,6 +3,7 @@ from PIL import Image,ImageTk
 import keyboard
 import os
 import time
+import importlib
 
 from territory import *
 from AI import *
@@ -44,14 +45,16 @@ def import_map():
 
     map_filename = input("Map filename: maps/")
 
-    maps_list = os.listdir("maps/")
-    
-    for file in maps_list:
-        if not file[-4:] == ".map":
-            maps_list.remove(file)
-    
     if not map_filename:
+        # no map name provided, so choose randomly
+        maps_list = os.listdir("maps/")
+    
+        for file in maps_list:
+            if not file[-4:] == ".map":
+                maps_list.remove(file)
+                
         map_filename = "maps/" + random.choice(maps_list)
+
     else:
         map_filename = "maps/" + map_filename
         
@@ -63,7 +66,16 @@ def import_map():
         line = line.split("|")
 
         if line[0] == "C":
-            new_country = country(line[1], line[2])
+            if len(line) == 4:
+                new_country = country(line[1], line[2], line[3])
+            elif len(line) == 3:
+                new_country = country(line[1], line[2])
+            else:
+                try:
+                    print("Wrong number of arguments to create country: ", line[1])
+                except:
+                    print("Wrong number of arguments to create new country.")
+                    break
             countries.append(new_country)
 
         elif line[0] == "R":
@@ -124,7 +136,8 @@ def main():
 
         country_text_y = country_text_y_start
         for country in countries:
-            canvas.create_text(500, country_text_y, text=country.get_name() + " T: " + str(country.get_number_of_regions()) + " P: " + str(country.get_power()),
+            canvas.create_text(500, country_text_y, text=country.get_name() + " (" + country.get_AI() + ")" + " T: " +
+                               str(country.get_number_of_regions()) + " P: " + str(country.get_power()),
                                fill=country.get_color(), font=("Times New Roman", 12))
             country_text_y += 15
 
@@ -173,7 +186,7 @@ def main():
                     countries.remove(country)
                     del country
                 else:
-                    AI_orders = make_decisions(country)
+                    AI_orders = get_AI_commands(country)
                     target_country_color = AI_orders[0][1].get_owner().get_color()
                     attack_success = country.attack(AI_orders[0][0], AI_orders[0][1])
 

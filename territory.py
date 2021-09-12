@@ -1,4 +1,5 @@
 import random
+from AI import default_AI
 
 class region():
     def __init__(self, name, owner, development, pos):
@@ -67,13 +68,13 @@ class region():
                 break
 
         return is_bordering_enemy
-                
 
 class country():
-    def __init__(self, name, color):
+    def __init__(self, name, color, AI=default_AI):
         self.name = name
         self.color = color
         self.regions = []
+        self.AI = AI
 
     def get_name(self):
         return self.name
@@ -83,6 +84,12 @@ class country():
 
     def get_regions(self):
         return self.regions
+
+    def get_AI(self):
+        if self.AI:
+            return self.AI
+        else:
+            return default_AI
 
     def get_power(self):
         power = 0
@@ -115,9 +122,16 @@ class country():
         if origin.get_owner() == target.get_owner():
             print("Can't attack self!")
             return
-        
-        attack_strength = origin.get_power() * random.randint(1, 6)
-        defense_strength = target.get_power() * random.randint(1, 6)
+
+        if origin.get_power() > target.get_power():
+            attack_strength = origin.get_power() * random.uniform(1, 1.5)
+            defense_strength = target.get_power() * random.uniform(0.9, 1.25)
+        elif origin.get_power() == target.get_power():
+            attack_strength = origin.get_power() * random.uniform(0.9, 1.25)
+            defense_strength = target.get_power() * random.uniform(0.9, 1.25)
+        else:
+            attack_strength = origin.get_power() * random.uniform(0.9, 1.25)
+            defense_strength = target.get_power() * random.uniform(1, 1.5)
 
         if attack_strength > defense_strength:
             # attack success, change owner
@@ -128,16 +142,16 @@ class country():
             # change values to after-war values
             o_p = origin.get_power()
             t_p = target.get_power()
-            target.set_power(max(o_p - t_p, 1))
-            origin.set_power(max(int(o_p - (attack_strength - defense_strength)/o_p), 1))
+            target.set_power(max(int(-defense_strength/2 + (o_p + attack_strength)/2), 1))
+            origin.set_power(max(int((attack_strength + o_p)/4 - defense_strength/2), 1))
 
             success = True
             
         else:
             o_p = origin.get_power()
             t_p = target.get_power()
-            target.set_power(max(int(t_p - (defense_strength - attack_strength)/t_p), 1))
-            origin.set_power(max(int(o_p - (defense_strength - attack_strength)/o_p), 1))
+            target.set_power(max(int(t_p + o_p/2 + (attack_strength - defense_strength)/2), 1))
+            origin.set_power(max(int(o_p/2 + (attack_strength - defense_strength)/2), 1))
 
         return success
 

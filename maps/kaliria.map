@@ -1,7 +1,7 @@
 M|hell_bridge.png
-C|North Kaliria|red
-C|South Kaliria|blue
-C|Makojosu|magenta
+C|North Kaliria|red|opportunist_AI
+C|South Kaliria|blue|opportunist_AI
+C|Makojosu|magenta|spray_n_pray_AI
 R|Kaliria-sa|South Kaliria|8|248|394
 R|Kaliria-non|North Kaliria|8|156|172
 R|Makojosun|Makojosu|8|828|205
