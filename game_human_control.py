@@ -7,6 +7,7 @@ import importlib
 
 from territory import *
 from AI import *
+from player_control import *
 
 countries = []
 regions = []
@@ -136,7 +137,7 @@ def main():
 
         country_text_y = country_text_y_start
         for country in countries:
-            canvas.create_text(500, country_text_y, text=country.get_name() + " (" + country.get_AI() + ")" + " T: " +
+            canvas.create_text(500, country_text_y, text=country.get_name() + " (Human Control)" + " T: " +
                                str(country.get_number_of_regions()) + " P: " + str(country.get_power()),
                                fill=country.get_color(), font=("Times New Roman", 12))
             country_text_y += 15
@@ -186,7 +187,7 @@ def main():
                     countries.remove(country)
                     del country
                 else:
-                    AI_orders = get_AI_commands(country)
+                    AI_orders = get_human_commands(country, globe)
                     target_country_color = AI_orders[0][1].get_owner().get_color()
                     attack_success = country.attack(AI_orders[0][0], AI_orders[0][1])
 
