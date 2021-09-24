@@ -1,5 +1,4 @@
 import random
-from AI import default_AI
 
 class region():
     def __init__(self, name, owner, development, pos):
@@ -70,7 +69,7 @@ class region():
         return is_bordering_enemy
 
 class country():
-    def __init__(self, name, color, AI=default_AI):
+    def __init__(self, name, color, AI=None):
         self.name = name
         self.color = color
         self.regions = []
@@ -89,7 +88,7 @@ class country():
         if self.AI:
             return self.AI
         else:
-            return default_AI
+            return None
 
     def get_power(self):
         power = 0

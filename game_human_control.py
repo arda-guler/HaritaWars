@@ -6,7 +6,6 @@ import time
 import importlib
 
 from territory import *
-from AI import *
 from player_control import *
 
 countries = []
