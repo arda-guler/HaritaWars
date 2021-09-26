@@ -113,13 +113,13 @@ def import_map():
 
     img = ImageTk.PhotoImage(Image.open(map_bg_filename))
 
-    return canvas, img, win
+    return canvas, img, win, size_x, size_y
 
 def main():
 
     global countries, regions, globe, turn, last_turn_buffer
     
-    canvas, img, win = import_map()
+    canvas, img, win, size_x, size_y = import_map()
 
     while len(countries) > 1:
 
@@ -132,11 +132,11 @@ def main():
             canvas.create_text(r.get_pos()[0]+5, r.get_pos()[1]+20, text=r.get_name(), fill=r.get_owner().get_color(), font=("Times New Roman", 10))
 
         turn_number_text = "Turn: " + str(turn)
-        canvas.create_text(500, 25, text=turn_number_text, fill="black", font=("Times New Roman", 16))
+        canvas.create_text(size_x * 0.5, 25, text=turn_number_text, fill="black", font=("Times New Roman", 16))
 
         country_text_y = country_text_y_start
         for country in countries:
-            canvas.create_text(500, country_text_y, text=country.get_name() + " (" + country.get_AI() + ")" + " T: " +
+            canvas.create_text(size_x * 0.5, country_text_y, text=country.get_name() + " (" + country.get_AI() + ")" + " T: " +
                                str(country.get_number_of_regions()) + " P: " + str(country.get_power()),
                                fill=country.get_color(), font=("Times New Roman", 12))
             country_text_y += 15
@@ -239,14 +239,14 @@ def main():
         time.sleep(0.05)
 
     canvas.create_image(10, 10, anchor=NW, image=img)
-    canvas.create_text(500, 25, text=turn_number_text, fill="black", font=("Times New Roman", 16))
+    canvas.create_text(size_x * 0.5, 25, text=turn_number_text, fill="black", font=("Times New Roman", 16))
         
     for r in globe.get_regions():
         canvas.create_oval(r.get_pos()[0], r.get_pos()[1], r.get_pos()[0] + 10, r.get_pos()[1] + 10, fill=r.get_owner().get_color())
         canvas.create_text(r.get_pos()[0]-5, r.get_pos()[1]-5, text=r.get_power(), fill="black")
         canvas.create_text(r.get_pos()[0]+5, r.get_pos()[1]+20, text=r.get_name(), fill=r.get_owner().get_color())
 
-    canvas.create_text(500, country_text_y_start, text=countries[0].get_name() + " T: " + str(countries[0].get_number_of_regions()) + " P: " + str(countries[0].get_power()),
+    canvas.create_text(size_x * 0.5, country_text_y_start, text=countries[0].get_name() + " T: " + str(countries[0].get_number_of_regions()) + " P: " + str(countries[0].get_power()),
                        fill=countries[0].get_color(), font=("Times New Roman", 12))
 
     print("Winner is: " + countries[0].get_name())

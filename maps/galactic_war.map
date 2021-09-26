@@ -1,0 +1,50 @@
+M|ssc2008-10a.jpg
+C|Solar Federation|blue|opportunity_balance_AI
+C|Qahio-li Syndicate|red|spray_n_pray_AI
+C|Clarketech Inc.|green|opportunist_AI
+C|Mikuprime|magenta|opportunist_AI
+C|Genesis-II|yellow|opportunist_AI
+R|Sirius|Solar Federation|5|246|386
+R|Farpoint|Solar Federation|7|250|465
+R|Sol|Solar Federation|10|271|400
+R|Dyson|Solar Federation|7|313|424
+R|Atomia|Solar Federation|4|212|398
+R|Qahio-li|Qahio-li Syndicate|9|390|312
+R|Qahio-sho|Qahio-li Syndicate|6|405|353
+R|Qo-nos|Qahio-li Syndicate|7|357|348
+R|Qigaho|Qahio-li Syndicate|5|375|412
+R|Qigiri|Qahio-li Syndicate|5|300|340
+R|Clarke|Clarketech Inc.|10|219|329
+R|Ramforge|Clarketech Inc.|10|266|269
+R|Aou|Mikuprime|10|128|320
+R|Mei|Mikuprime|7|100|363
+R|Oue|Mikuprime|5|100|274
+R|Soui|Mikuprime|6|154|269
+R|Eiu|Mikuprime|3|135|226
+R|Node-I|Genesis-II|8|321|176
+R|Node-II|Genesis-II|8|390|204
+R|Node-III|Genesis-II|8|275|145
+R|Node-IV|Genesis-II|7|324|238
+R|Node-V|Genesis-II|2|386|140
+N|Sirius|Clarke, Atomia, Sol, Qigiri
+N|Farpoint|Atomia, Sol, Dyson, Mei
+N|Sol|Sirius, Atomia, Farpoint, Dyson, Qigiri, Qo-nos
+N|Dyson|Sol, Farpoint, Qigaho, Qo-nos
+N|Atomia|Clarke, Sirius, Sol, Farpoint, Mei, Aou
+N|Qahio-li|Qahio-sho, Qo-nos, Qigiri, Node-II, Node-IV
+N|Qahio-sho|Qigaho, Qo-nos, Qahio-li
+N|Qo-nos|Sol, Qigiri, Dyson, Qigaho, Qahio-sho, Qahio-li
+N|Qigaho|Dyson, Qo-nos, Qahio-sho
+N|Qigiri|Sol, Sirius, Clarke, Qo-nos, Qahio-li, Node-II, Node-IV
+N|Clarke|Ramforge, Sirius, Atomia, Qigiri, Aou, Soui, Mei
+N|Ramforge|Clarke, Node-IV, Soui, Node-III, Node-I, Eiu
+N|Aou|Atomia, Clarke, Mei, Soui, Oue
+N|Mei|Atomia, Aou, Oue, Farpoint, Clarke
+N|Oue|Aou, Eiu, Soui, Mei
+N|Soui|Aou, Eiu, Oue, Clarke, Ramforge
+N|Eiu|Oue, Soui, Node-III, Ramforge
+N|Node-I|Node-IV, Node-II, Node-III, Node-V, Ramforge
+N|Node-II|Node-I, Node-IV, Node-V, Qahio-li, Qigiri
+N|Node-III|Node-I, Node-V, Ramforge, Eiu
+N|Node-IV|Ramforge, Node-I, Node-II, Qahio-li, Qigiri
+N|Node-V|Node-III, Node-I, Node-II

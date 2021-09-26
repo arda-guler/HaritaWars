@@ -1,8 +1,8 @@
 M|hell_bridge.png
 
-C|Fairy Empire|red
-C|New Atlantis Federation|blue
-C|Alliance of Free Realms|green
+C|Fairy Empire|red|opportunity_balance_AI
+C|New Atlantis Federation|blue|power_shift_AI
+C|Alliance of Free Realms|green|opportunist_AI
 C|Order of Salvation|magenta
 
 R|Ancient Shrine|Order of Salvation|5|138|86
