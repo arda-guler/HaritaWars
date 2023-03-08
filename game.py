@@ -44,6 +44,10 @@ def import_map():
     global countries, regions, globe
 
     map_filename = input("Map filename: maps/")
+    verbose = input("Console output? (y/N):")
+    slow = input("Slow the game down (for human supervision)? (y/N):")
+
+    print("\nPress Enter to resume and S to stop the game.")
 
     if not map_filename:
         # no map name provided, so choose randomly
@@ -113,14 +117,25 @@ def import_map():
 
     img = ImageTk.PhotoImage(Image.open(map_bg_filename))
 
-    return canvas, img, win, size_x, size_y
+    return canvas, img, win, size_x, size_y, verbose, slow
 
 def main():
 
     global countries, regions, globe, turn, last_turn_buffer
     
-    canvas, img, win, size_x, size_y = import_map()
+    canvas, img, win, size_x, size_y, verbose, slow = import_map()
 
+    if verbose and verbose.lower() == "y":
+        verbose = True
+    else:
+        verbose = False
+
+    if slow and slow.lower() == "y":
+        slow = True
+    else:
+        slow = False
+
+    running = False
     while len(countries) > 1:
 
         canvas.delete("all")
@@ -175,12 +190,20 @@ def main():
                 canvas.create_line(element[0][1].get_pos()[0]-15, element[0][1].get_pos()[1]+15,
                                    element[0][1].get_pos()[0]+15, element[0][1].get_pos()[1]+15,
                                    fill=target_country_color)
-        
+
         if keyboard.is_pressed("Enter"):
+            running = True
+        elif keyboard.is_pressed("S"):
+            running = False
+            
+        if running:
             turn += 1
             last_turn_buffer = []
-            print("******************")
-            print("Turn: " + str(turn))
+
+            if verbose:
+                print("******************")
+                print("Turn: " + str(turn))
+                
             for country in countries:
                 if not country.has_regions():
                     countries.remove(country)
@@ -224,19 +247,22 @@ def main():
 
                     last_turn_buffer.append([AI_orders, country, attack_success, target_country_color])
 
-                    print(country.get_name())
-                    if attack_success:
-                        print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(SUCCESS)")
-                    else:
-                        print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(FAILURE)")
+                    if verbose:
+                        print(country.get_name())
+                        if attack_success:
+                            print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(SUCCESS)")
+                        else:
+                            print(AI_orders[0][0].get_name() + " ---> " + AI_orders[0][1].get_name() + "(FAILURE)")
 
-                    for placement in AI_orders[1]:
-                        print("+1", placement.get_name())
+                        for placement in AI_orders[1]:
+                            print("+1", placement.get_name())
 
-                    print("\n")
+                        print("\n")
 
         win.update()
-        time.sleep(0.05)
+
+        if slow:
+            time.sleep(0.05)
 
     canvas.create_image(10, 10, anchor=NW, image=img)
     canvas.create_text(size_x * 0.5, 25, text=turn_number_text, fill="black", font=("Times New Roman", 16))

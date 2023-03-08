@@ -7,7 +7,7 @@ Mini strategy game to pit AI's against each other.
 To start a game, simply run 'game.py'. It will ask you to specify a map file name from maps/ folder - you can leave it blank to start a random one.
 
 A visualizer window will appear, with colorful regions placed around the map. Since the game is completely AI-driven, you don't have much to do. 
-Simply press the Enter key to advance the simulation.
+Simply press the Enter key to start the game. Press S to pause it at any time.
 
 ![war](https://user-images.githubusercontent.com/80536083/132990595-80bd9db1-cf51-4cb6-98f1-0f167b27b345.PNG)
 
